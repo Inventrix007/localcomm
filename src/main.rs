@@ -31,6 +31,7 @@ async fn main() -> Result<()> {
                 commands::chat::run(&address).await?;
             }
             Commands::Serve { port, name } => {
+                println!("{}", "=== localComm Server ===");
                 commands::serve::run(port, name).await?;
             }
             Commands::Transfer { subcommand } => {
